@@ -4,5 +4,12 @@
     "phoneNumber": "6396469088",
     "password": "passwordisnotpassword",
     "tag": "valid_login"
+  },
+  {
+    "description": "This account is intended for testing linkedin login",
+    "phoneNumber": "6396469088",
+    "email": "ishaanagarwal1801@gmail.com",
+    "password": "password",
+    "tag": "invalid_login"
   }
 ]

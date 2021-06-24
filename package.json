@@ -10,7 +10,8 @@
   },
   "scripts": {
     "test_ui": "npx cypress open --config $npm_package_config_desktop_view",
-    "test_headless": "npx cypress run $npm_package_config_headless_frontend"
+    "test_headless": "npx cypress run $npm_package_config_headless_frontend",
+    "cy:run": "node cypress/scripts/cypress.js"
   },
   "repository": {
     "type": "git",
@@ -36,7 +37,10 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-friendly-formatter": "^4.0.1",
     "eslint-plugin-import": "^2.21.2",
-    "eslint-plugin-jsdoc": "^30.7.3"
+    "eslint-plugin-jsdoc": "^30.7.3",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0"
   },
   "engines": {
     "node": "12.18.0",

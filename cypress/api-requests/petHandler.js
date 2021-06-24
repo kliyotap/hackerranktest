@@ -104,27 +104,4 @@ export default class PetsAPI extends API {
       headers: this.getHeaders(),
     }).its('body').then((body) => body || {})
   }
-
-  static getPetDetailsMocked(petId) {
-    const petDetails = {
-      id: petId,
-      category: {
-        id: 0,
-        name: "string"
-      },
-      name: "Lamberty",
-      photoUrls: [
-        "string"
-      ],
-      tags: [
-        {
-          id: 0,
-          name: "string"
-        }
-      ],
-      status: "available"
-    };
-
-    return petDetails;
-  }
 }

@@ -14,5 +14,11 @@
   "retries": {
     "runMode": 1,
     "openMode": 0
+  },
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "overwrite": false,
+    "html": false,
+    "json": true
   }
 }

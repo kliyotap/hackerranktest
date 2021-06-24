@@ -40,6 +40,22 @@ export default class FeedPage {
   }
 
   /**
+   *
+   * @returns  {Cypress.Chainable<any>}
+   */
+  static photoInNavBar() {
+    return cy.get('.global-nav__me-photo').should('exist');
+  }
+
+  /**
+   *
+   * @returns  {Cypress.Chainable<any>}
+   */
+  static signOutLink() {
+    return cy.get('.global-nav__secondary-item').find('.mv1').filter(':contains("Sign Out")');
+  }
+
+  /**
    * verify after login home page is loaded
    * not all controls are being checked except few in top Navigation bar
    */
@@ -49,5 +65,10 @@ export default class FeedPage {
     this.jobsNavBarLink().should('be.visible');
     this.messagingNavBarLink().should('be.visible');
     this.notificationsNavBarLink().should('be.visible');
+  }
+
+  static signOut() {
+    this.photoInNavBar().click();
+    this.signOutLink().click({ force: true })
   }
 }
