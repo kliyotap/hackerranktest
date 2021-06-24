@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "description": " HackerRank Test",
   "main": "index.js",
+  "config": {
+    "desktop_view": "viewportHeight=1024,viewportWidth=1480",
+    "headless_frontend": "--headless --browser chrome --spec 'cypress/integration/frontend/**'",
+    "record": "--record"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "api_test": "npx cypress open --config $npm_package_config_desktop_view"
   },
   "repository": {
     "type": "git",
@@ -20,7 +25,16 @@
   },
   "homepage": "https://github.com/kliyotap/hackerranktest#readme",
   "dependencies": {
-    "cypress": "^7.5.0"
+    "cypress": "^7.5.0",
+    "cypress-wait-until": "^1.7.1"
+  },
+  "devDependencies": {
+    "@bahmutov/cypress-extends": "^1.1.0",
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsdoc": "^30.7.3"
   },
   "engines": {
     "node": "12.18.0",

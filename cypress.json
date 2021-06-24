@@ -1,0 +1,12 @@
+{
+  "env": {
+    "pet_store_api": "https://petstore.swagger.io/v2/pet"
+  },
+  "chromeWebSecurity": false,
+  "defaultCommandTimeout": 8000,
+  "execTimeout": 60000,
+  "pageLoadTimeout": 60000,
+  "requestTimeout": 30000,
+  "responseTimeout": 30000,
+  "video": false
+}
