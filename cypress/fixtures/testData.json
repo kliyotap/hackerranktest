@@ -1,0 +1,8 @@
+[
+  {
+    "description": "This account is intended for testing linkedin login",
+    "phoneNumber": "6396469088",
+    "password": "passwordisnotpassword",
+    "tag": "valid_login"
+  }
+]

@@ -23,3 +23,13 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+/**
+ * get a profile object from the profiles fixture by tag.
+ *
+ * @param {string} tag - The tag used to find a test user
+ * @returns {object} profile object or empty object if profile with specified username not found
+ */
+Cypress.Commands.add('getTestUserByTag', (tag) => {
+  return cy.fixture('testData').then((p) => p.filter((profile) => profile.tag === tag)[0] || {});
+});

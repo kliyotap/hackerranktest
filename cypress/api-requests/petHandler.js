@@ -23,6 +23,7 @@ export default class PetsAPI extends API {
    */
   static getPetsByStatus(status) {
     expect(status).to.be.not.eql('');
+    cy.log('verify pet status is not empty string or null');
     return cy.request({
       url: `${Cypress.env('pet_store_api')}/findByStatus?status=${status}`,
       method: 'GET',
@@ -104,4 +105,26 @@ export default class PetsAPI extends API {
     }).its('body').then((body) => body || {})
   }
 
+  static getPetDetailsMocked(petId) {
+    const petDetails = {
+      id: petId,
+      category: {
+        id: 0,
+        name: "string"
+      },
+      name: "Lamberty",
+      photoUrls: [
+        "string"
+      ],
+      tags: [
+        {
+          id: 0,
+          name: "string"
+        }
+      ],
+      status: "available"
+    };
+
+    return petDetails;
+  }
 }

@@ -5,11 +5,12 @@
   "main": "index.js",
   "config": {
     "desktop_view": "viewportHeight=1024,viewportWidth=1480",
-    "headless_frontend": "--headless --browser chrome --spec 'cypress/integration/frontend/**'",
+    "headless_frontend": "--headless --browser chrome --spec 'cypress/integration/**'",
     "record": "--record"
   },
   "scripts": {
-    "api_test": "npx cypress open --config $npm_package_config_desktop_view"
+    "test_ui": "npx cypress open --config $npm_package_config_desktop_view",
+    "test_headless": "npx cypress run $npm_package_config_headless_frontend"
   },
   "repository": {
     "type": "git",
@@ -26,7 +27,8 @@
   "homepage": "https://github.com/kliyotap/hackerranktest#readme",
   "dependencies": {
     "cypress": "^7.5.0",
-    "cypress-wait-until": "^1.7.1"
+    "cypress-wait-until": "^1.7.1",
+    "faker": "^4.1.0"
   },
   "devDependencies": {
     "@bahmutov/cypress-extends": "^1.1.0",
