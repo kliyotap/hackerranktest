@@ -1,0 +1,49 @@
+{
+  "name": "hackerranktest",
+  "version": "1.0.0",
+  "description": " HackerRank Test",
+  "main": "index.js",
+  "config": {
+    "desktop_view": "viewportHeight=1024,viewportWidth=1480",
+    "headless_frontend": "--headless --browser chrome --spec 'cypress/integration/**'",
+    "record": "--record"
+  },
+  "scripts": {
+    "test_ui": "npx cypress open --config $npm_package_config_desktop_view",
+    "test_headless": "npx cypress run $npm_package_config_headless_frontend",
+    "cy:run": "node cypress/scripts/cypress.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kliyotap/hackerranktest.git"
+  },
+  "keywords": [
+    "automation"
+  ],
+  "author": "kliyotap",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kliyotap/hackerranktest/issues"
+  },
+  "homepage": "https://github.com/kliyotap/hackerranktest#readme",
+  "dependencies": {
+    "cypress": "^7.5.0",
+    "cypress-wait-until": "^1.7.1",
+    "faker": "^4.1.0"
+  },
+  "devDependencies": {
+    "@bahmutov/cypress-extends": "^1.1.0",
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsdoc": "^30.7.3",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0"
+  },
+  "engines": {
+    "node": "12.18.0",
+    "npm": "6.14.4"
+  }
+}

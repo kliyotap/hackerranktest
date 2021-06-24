@@ -1,0 +1,17 @@
+# IntelliJ project files
+.idea
+out
+
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+node_modules
+cypress/reports
+mochawesome-report
+
+# Icon must end with two \r
+Icon
+
+# Thumbnails
+._*
