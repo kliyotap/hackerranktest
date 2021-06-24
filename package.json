@@ -1,7 +1,7 @@
 {
   "name": "hackerranktest",
   "version": "1.0.0",
-  "description": "",
+  "description": " HackerRank Test",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,11 +10,20 @@
     "type": "git",
     "url": "git+https://github.com/kliyotap/hackerranktest.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "automation"
+  ],
+  "author": "kliyotap",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/kliyotap/hackerranktest/issues"
   },
-  "homepage": "https://github.com/kliyotap/hackerranktest#readme"
+  "homepage": "https://github.com/kliyotap/hackerranktest#readme",
+  "dependencies": {
+    "cypress": "^7.5.0"
+  },
+  "engines": {
+    "node": "12.18.0",
+    "npm": "6.14.4"
+  }
 }
