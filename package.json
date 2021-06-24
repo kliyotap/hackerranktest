@@ -6,10 +6,14 @@
   "config": {
     "desktop_view": "viewportHeight=1024,viewportWidth=1480",
     "headless_frontend": "--headless --browser chrome --spec 'cypress/integration/**'",
+    "headless_api": "--headless --browser chrome --spec 'cypress/integration/api-tests.js'",
+    "headless_fe": "--headless --browser chrome --spec 'cypress/integration/frontend-test.js'",
     "record": "--record"
   },
   "scripts": {
     "test_ui": "npx cypress open --config $npm_package_config_desktop_view",
+    "test_frontend": "npx cypress run $npm_package_config_headless_fe",
+    "test_api": "npx cypress run $npm_package_config_headless_api",
     "test_headless": "npx cypress run $npm_package_config_headless_frontend",
     "cy:run": "node cypress/scripts/cypress.js"
   },

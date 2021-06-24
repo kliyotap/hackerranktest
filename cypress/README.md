@@ -36,3 +36,13 @@ Please make sure you in root directory of the project
     npm run cy:run
   ```
 
+  4. If you just want to run frontend (linkedIn tests) in headless modee then use command
+  ```bash
+    npm run test_frontend
+  ```
+
+  5. If you just want to run frontend (linkedIn tests) in headless modee then use command
+  ```bash
+    npm run test_api
+  ```
+
